@@ -157,7 +157,7 @@ class LogicalBackupTest
       docker exec -i #{container_name} \
         pg_restore -Fc \
                    -U #{options.user} \
-                   -d #{options.dbname} 
+                   -d #{options.dbname} \
                    --no-password \
                    --exit-on-error \
                    --verbose < #{options.filepath} 
